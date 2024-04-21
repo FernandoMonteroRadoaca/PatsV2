@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 69605cc5042f81c4a9f67114caa7fab8
+guid: 9452a27aead1a944eb485764e31f054e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: perro1_0
+      name: perro1_-_copiaBordes_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47662ac1b8313d24fb8c3997ab2b2421
-      internalID: -1330600618
+      spriteID: e502722db8d90d446b650d570f341dc6
+      internalID: -1433355997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: perro1_1
+      name: perro1_-_copiaBordes_1
       rect:
         serializedVersion: 2
         x: 64
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e36d3a6c7dd23a34780c3cfbcd079c24
-      internalID: -1343953618
+      spriteID: d6c04097c55eab74d8f0217baa530ff7
+      internalID: -1929216250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: perro1_2
+      name: perro1_-_copiaBordes_2
       rect:
         serializedVersion: 2
         x: 128
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 860770bc3a813b0478b1a1b9ea8583d7
-      internalID: -222330522
+      spriteID: ed16c5f4e15b8ab4d85498155767a342
+      internalID: 159195780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: perro1_3
+      name: perro1_-_copiaBordes_3
       rect:
         serializedVersion: 2
         x: 192
@@ -187,8 +187,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92104901b9b4389469d13155ddf9808d
-      internalID: -498227843
+      spriteID: 0fecb048ed08a8f4ab2c579e597b9082
+      internalID: 1591463977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perro1_-_copiaBordes_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c859bca07a7c6f449f1e4ee19f6b8d1
+      internalID: 1938897326
       vertices: []
       indices: 
       edges: []
@@ -204,10 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      perro1_0: -1330600618
-      perro1_1: -1343953618
-      perro1_2: -222330522
-      perro1_3: -498227843
+      perro1_-_copiaBordes_0: -1433355997
+      perro1_-_copiaBordes_1: -1929216250
+      perro1_-_copiaBordes_2: 159195780
+      perro1_-_copiaBordes_3: 1591463977
+      perro1_-_copiaBordes_4: 1938897326
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
