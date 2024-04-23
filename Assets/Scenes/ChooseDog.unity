@@ -698,7 +698,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064741400}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd6d5da2ab61dcd46a8ffcda81d6d402, type: 3}
   m_Name: 
@@ -711,7 +711,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064741400}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97e98fbe1a8105d4a964d618d37f2b14, type: 3}
   m_Name: 
@@ -720,6 +720,9 @@ MonoBehaviour:
   velocidadInicialY: 1
   "intervaloCambioDirecci\xF3nMinimo": 1
   "intervaloCambioDirecci\xF3nMaximo": 3
+  duracionPausaInicial: 2
+  duracionPausaRegular: 3
+  intervaloParadasRegulares: 10
 --- !u!1 &1440236579
 GameObject:
   m_ObjectHideFlags: 0
