@@ -59,4 +59,12 @@ public class RandomMovement : MonoBehaviour
     {
         tiempoSiguienteCambioDirección = Time.time + Random.Range(intervaloCambioDirecciónMinimo, intervaloCambioDirecciónMaximo);
     }
+
+    // Este método se llama cuando este objeto colisiona con otro Collider2D
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Cambia la dirección solo si colisiona con otro objeto
+        CambiarDirección();
+        CalcularSiguienteCambioDirección();
+    }
 }
