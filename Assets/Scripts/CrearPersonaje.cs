@@ -15,6 +15,11 @@ public class NewBehaviourScript : MonoBehaviour
         {
             Pet1 = true;
         }
+
+        Pet1 = PlayerPrefs.GetInt("Pet1Select") ==1;
+        Pet2 = PlayerPrefs.GetInt("Pet2Select") ==1;
+        Pet3 = PlayerPrefs.GetInt("Pet3Select") ==1;
+
     }
 
     public void Mascota1()
