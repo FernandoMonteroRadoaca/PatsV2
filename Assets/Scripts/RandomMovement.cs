@@ -17,6 +17,7 @@ public class RandomMovement : MonoBehaviour
     private SpriteRenderer spriteRendererDog;
     private float tiempoSiguienteCambioDirección;
     private float tiempoFinPausa;
+    private float tiempoSiguienteParadaRegular;
     private Vector2 direccionActual;
     private bool enPausa;
     private bool primerInicio = true;
@@ -59,6 +60,12 @@ public class RandomMovement : MonoBehaviour
             spriteRendererDog.flipX = false;
         }
 
+        // Verificar si es hora de hacer una parada regular
+        if (!enPausa && Time.time >= tiempoSiguienteParadaRegular)
+        {
+            ParadaRegular();
+        }
+
         // Si está en pausa, verifica si la pausa ha terminado
         if (enPausa && Time.time >= tiempoFinPausa)
         {
@@ -99,11 +106,25 @@ public class RandomMovement : MonoBehaviour
         float duracionPausa = duracionPausaRegular;
         tiempoFinPausa = Time.time + duracionPausa;
         enPausa = true;
+
+        // Establece el siguiente tiempo para una parada regular
+        tiempoSiguienteParadaRegular = Time.time + intervaloParadasRegulares;
     }
 
     private void CalcularSiguienteCambioDirección()
     {
         tiempoSiguienteCambioDirección = Time.time + Random.Range(intervaloCambioDirecciónMinimo, intervaloCambioDirecciónMaximo);
+    }
+
+    private void ParadaRegular()
+    {
+        // Detiene al personaje durante una pausa regular
+        float duracionPausa = duracionPausaRegular;
+        tiempoFinPausa = Time.time + duracionPausa;
+        enPausa = true;
+
+        // Establece el siguiente tiempo para una parada regular
+        tiempoSiguienteParadaRegular = Time.time + intervaloParadasRegulares;
     }
 
     // Este método se llama cuando este objeto colisiona con otro Collider2D
