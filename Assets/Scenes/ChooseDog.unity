@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 514525560}
   - component: {fileID: 514525559}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: ColliderRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -379,8 +379,8 @@ Transform:
   m_GameObject: {fileID: 514525558}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.17272049, w: 0.9849709}
-  m_LocalPosition: {x: 9.1337, y: -2.1027, z: 1}
-  m_LocalScale: {x: 2.1255178, y: 5.239434, z: 1}
+  m_LocalPosition: {x: 9.1569, y: -2.08, z: 1}
+  m_LocalScale: {x: 2.1690907, y: 5.255152, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -689,40 +689,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &630337093
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 630337094}
-  m_Layer: 0
-  m_Name: Pet
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &630337094
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630337093}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2945428, y: -2.2424827, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1064741402}
-  - {fileID: 1522772716}
-  - {fileID: 1471116766}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &642431069
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,7 +810,7 @@ GameObject:
   - component: {fileID: 1064741406}
   - component: {fileID: 1064741407}
   m_Layer: 0
-  m_Name: Dog
+  m_Name: Dog1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -859,12 +825,12 @@ Transform:
   m_GameObject: {fileID: 1064741400}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.2945428, y: -2.2424827, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 565270166}
-  m_Father: {fileID: 630337094}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1064741403
 Rigidbody2D:
@@ -1013,7 +979,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1803908317}
+        m_TargetAssemblyTypeName: CambiarEscena, Assembly-CSharp
+        m_MethodName: iniciar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1440236579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,7 +1075,7 @@ GameObject:
   - component: {fileID: 1471116762}
   - component: {fileID: 1471116767}
   m_Layer: 0
-  m_Name: Dog (2)
+  m_Name: Dog3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1216,12 +1194,12 @@ Transform:
   m_GameObject: {fileID: 1471116761}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.6345427, y: 0, z: 0}
+  m_LocalPosition: {x: 3.34, y: -2.2424827, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 518968950}
-  m_Father: {fileID: 630337094}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1471116767
 MonoBehaviour:
@@ -1266,7 +1244,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1803908317}
+        m_TargetAssemblyTypeName: CambiarEscena, Assembly-CSharp
+        m_MethodName: iniciar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1522772711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1282,7 +1272,7 @@ GameObject:
   - component: {fileID: 1522772712}
   - component: {fileID: 1522772717}
   m_Layer: 0
-  m_Name: Dog (1)
+  m_Name: Dog2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1401,12 +1391,12 @@ Transform:
   m_GameObject: {fileID: 1522772711}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5854573, y: 0, z: 0}
+  m_LocalPosition: {x: -3.88, y: -2.2424827, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 642431070}
-  m_Father: {fileID: 630337094}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1522772717
 MonoBehaviour:
@@ -1451,7 +1441,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1803908317}
+        m_TargetAssemblyTypeName: CambiarEscena, Assembly-CSharp
+        m_MethodName: iniciar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1720431061
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,7 +1466,7 @@ GameObject:
   - component: {fileID: 1720431063}
   - component: {fileID: 1720431062}
   m_Layer: 0
-  m_Name: Square (3)
+  m_Name: ColliderBot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1582,6 +1584,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1803908316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1803908318}
+  - component: {fileID: 1803908317}
+  m_Layer: 0
+  m_Name: Function
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1803908317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803908316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66bdc1ccf04f583419033115b85f035d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numEscena: 2
+--- !u!4 &1803908318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803908316}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5348155, y: -1.2654381, z: 0.98366475}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1936681152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1594,7 +1641,7 @@ GameObject:
   - component: {fileID: 1936681154}
   - component: {fileID: 1936681153}
   m_Layer: 0
-  m_Name: Square
+  m_Name: ColliderTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1706,7 +1753,7 @@ Transform:
   m_GameObject: {fileID: 1936681152}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1208, y: 1.17, z: 1}
+  m_LocalPosition: {x: 0.07, y: 1.17, z: 1}
   m_LocalScale: {x: 15.809277, y: 4.9396, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1724,7 +1771,7 @@ GameObject:
   - component: {fileID: 2012138745}
   - component: {fileID: 2012138744}
   m_Layer: 0
-  m_Name: Square (2)
+  m_Name: ColliderLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1835,13 +1882,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012138743}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.17302237, w: 0.98491794}
-  m_LocalPosition: {x: -9.23, y: -2.46, z: 1}
-  m_LocalScale: {x: 2.1737757, y: 4.9396, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.18426688, w: -0.9828763}
+  m_LocalPosition: {x: -9.25, y: -2.35, z: 1}
+  m_LocalScale: {x: 2.3041837, y: 5.0342755, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -19.927}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -21.237}
 --- !u!1 &2071398484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1956,8 +2003,11 @@ SceneRoots:
   - {fileID: 193883798}
   - {fileID: 1440236582}
   - {fileID: 2071398488}
-  - {fileID: 630337094}
   - {fileID: 1936681155}
   - {fileID: 1720431064}
   - {fileID: 514525561}
   - {fileID: 2012138746}
+  - {fileID: 1064741402}
+  - {fileID: 1522772716}
+  - {fileID: 1471116766}
+  - {fileID: 1803908318}
