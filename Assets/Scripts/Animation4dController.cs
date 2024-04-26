@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class Animation4dController : MonoBehaviour
 {
-    
-    
     [SerializeField] private float speedMovement;
     private Vector2 direction;
     private Rigidbody2D rb2D;
     private Animator animator;
+    private Collider2D lastCollision;
+    private float timeSinceLastCollision; // Contador de tiempo desde la última colisión
+    public float timeBetweenCollisions = 1.0f; // Tiempo mínimo entre cambios de dirección
 
     private void Start()
     {
@@ -35,8 +36,17 @@ public class Animation4dController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Cambiar la dirección hacia la opuesta cuando se detecta una colisión
-        ChangeDirection();
+        // Verificar si ha pasado suficiente tiempo desde la última colisión
+        if (Time.time - timeSinceLastCollision > timeBetweenCollisions)
+        {
+            // Cambiar la dirección solo si la colisión es diferente a la última colisión
+            if (collision.collider != lastCollision)
+            {
+                ChangeDirection();
+                lastCollision = collision.collider;
+                timeSinceLastCollision = Time.time; // Actualizar el tiempo de la última colisión
+            }
+        }
     }
 
     private void ChangeDirection()
@@ -46,4 +56,5 @@ public class Animation4dController : MonoBehaviour
         float randomY = Random.Range(-1f, 1f);
         direction = new Vector2(randomX, randomY).normalized;
     }
-}
+
+}    
