@@ -78,6 +78,26 @@ public class RandomMovement : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Reflejar la dirección actual en relación con la normal de la colisión
+        direccionActual = Vector2.Reflect(direccionActual, collision.contacts[0].normal);
+        rb.velocity = direccionActual;
+
+        // Calcular el ángulo entre la dirección actual y la dirección reflejada
+        float angle = Vector2.Angle(rb.velocity.normalized, direccionActual.normalized);
+
+        // Si el ángulo es menor que 90 grados, agregar o restar 90 grados según convenga
+        if (angle < 90f)
+        {
+            // Seleccionar aleatoriamente si sumar o restar 90 grados
+            int randomSign = Random.value > 0.5f ? 1 : -1;
+            // Ajustar la dirección sumando o restando 90 grados
+            direccionActual = Quaternion.Euler(0, 0, 90 * randomSign) * direccionActual;
+            rb.velocity = direccionActual;
+        }
+    }
+
     private void CambiarDirección()
     {
         direccionActual = Random.insideUnitCircle.normalized;
@@ -125,13 +145,5 @@ public class RandomMovement : MonoBehaviour
 
         // Establece el siguiente tiempo para una parada regular
         tiempoSiguienteParadaRegular = Time.time + intervaloParadasRegulares;
-    }
-
-    // Este método se llama cuando este objeto colisiona con otro Collider2D
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        // Reflejar la dirección actual en relación con la normal de la colisión
-        direccionActual = Vector2.Reflect(direccionActual, collision.contacts[0].normal);
-        rb.velocity = direccionActual;
     }
 }
