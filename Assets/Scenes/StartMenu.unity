@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit
+  m_text: Salir
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 783d424e0eb357a40abf992dbf0c26c1, type: 2}
   m_sharedMaterial: {fileID: -1090187928357298205, guid: 783d424e0eb357a40abf992dbf0c26c1, type: 2}
@@ -563,7 +563,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play
+  m_text: Jugar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 783d424e0eb357a40abf992dbf0c26c1, type: 2}
   m_sharedMaterial: {fileID: -1090187928357298205, guid: 783d424e0eb357a40abf992dbf0c26c1, type: 2}
@@ -773,7 +773,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Volume
+  m_text: Musica
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 783d424e0eb357a40abf992dbf0c26c1, type: 2}
   m_sharedMaterial: {fileID: -1090187928357298205, guid: 783d424e0eb357a40abf992dbf0c26c1, type: 2}
@@ -1165,7 +1165,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 1032bd13ff657d44ab04bc6ce322e286, type: 2}
   m_audioClip: {fileID: 8300000, guid: 8a18c335cf9c3e5439966a18022d5a44, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.699
+  m_Volume: 0.346
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2727,7 +2727,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Return
+  m_text: Volver
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 783d424e0eb357a40abf992dbf0c26c1, type: 2}
   m_sharedMaterial: {fileID: -1090187928357298205, guid: 783d424e0eb357a40abf992dbf0c26c1, type: 2}
@@ -3214,7 +3214,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Options
+  m_text: Opciones
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 783d424e0eb357a40abf992dbf0c26c1, type: 2}
   m_sharedMaterial: {fileID: -1090187928357298205, guid: 783d424e0eb357a40abf992dbf0c26c1, type: 2}
@@ -3591,7 +3591,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Full Screen
+  m_text: Pantalla completa
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 783d424e0eb357a40abf992dbf0c26c1, type: 2}
   m_sharedMaterial: {fileID: -1090187928357298205, guid: 783d424e0eb357a40abf992dbf0c26c1, type: 2}
