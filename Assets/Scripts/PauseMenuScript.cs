@@ -8,9 +8,25 @@ public class PauseMenuScript : MonoBehaviour
     [SerializeField] private GameObject pauseButton;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject musicManager;
+    private bool pausedGame = false;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)) 
+        {
+            if (pausedGame)
+            {
+                Reset();
+            }
+            else
+            { 
+                Pause();
+            }
+        }
+    }
     public void Pause()
     {
+        pausedGame = true;
         Time.timeScale = 0f;
         pauseButton.SetActive(false);
         pauseMenu.SetActive(true);
@@ -19,6 +35,7 @@ public class PauseMenuScript : MonoBehaviour
 
     public void Reset()
     {
+        pausedGame = false;
         Time.timeScale = 1f;
         pauseButton.SetActive(true);
         pauseMenu.SetActive(false);
