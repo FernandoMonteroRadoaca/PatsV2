@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 4048569607591712416}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6587027bb4fcf884b89dea091a1f7aa1, type: 2}
+  m_Controller: {fileID: 9100000, guid: c193638c888499e47be397693d53f754, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -119,6 +119,8 @@ GameObject:
   - component: {fileID: 7436001421549067138}
   - component: {fileID: 4184216420310432769}
   - component: {fileID: 4283920819731472622}
+  - component: {fileID: 1696261823446748696}
+  - component: {fileID: 7293126506643672066}
   m_Layer: 0
   m_Name: Dog1
   m_TagString: Untagged
@@ -234,7 +236,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7095890813266360615}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97e98fbe1a8105d4a964d618d37f2b14, type: 3}
   m_Name: 
@@ -246,3 +248,32 @@ MonoBehaviour:
   duracionPausaInicial: 2
   duracionPausaRegular: 3
   intervaloParadasRegulares: 10
+--- !u!114 &1696261823446748696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7095890813266360615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb074b6997947e8469a7bf747b5c797f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedMovement: 1
+  timeBetweenCollisions: 0.1
+--- !u!114 &7293126506643672066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7095890813266360615}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71f6ac5facc02b14c9cdfd38bdb99ad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loveImage: {fileID: 0}
+  actualLove: 30
+  maxLove: 100
