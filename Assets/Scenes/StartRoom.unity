@@ -898,7 +898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loveImage: {fileID: 1487566252}
-  actualLove: 42.8
+  actualLove: 41.8
   maxLove: 100
 --- !u!4 &437341604
 Transform:
