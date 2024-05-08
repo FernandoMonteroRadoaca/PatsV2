@@ -8,6 +8,7 @@ public class GameOverScript : MonoBehaviour
 {
     [SerializeField] private GameObject MenuGameOver;
     private LoveBar loveBar;
+    [SerializeField] private AudioSource musicSource;
 
 
 
@@ -19,11 +20,13 @@ public class GameOverScript : MonoBehaviour
     private void ActivateMenu(object sender, EventArgs e)
     {
         MenuGameOver.SetActive(true);
+        musicSource.UnPause();
+
     }
     public void LoadStartMenu()
     {
         Time.timeScale = 1f;
-
+        musicSource.UnPause();
         SceneManager.LoadScene("StartMenu", LoadSceneMode.Single);
 
 
