@@ -20,6 +20,7 @@ public class LoveBar : MonoBehaviour
 
     private void Start()
     {
+        actualLove = maxLove * 0.9f;
         // Call DecreaseLoveAndHunger method every 0.5 seconds for love and every second for hunger
         InvokeRepeating("DecreaseLove", 0f, 0.5f);
         InvokeRepeating("DecreaseHunger", 0f, 1f);

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Bone
   m_EditorClassIdentifier: 
   imageObject: {fileID: -1738638589, guid: 46bb627c6a181ec458ee252be14e4412, type: 3}
-  textObject: Bone
+  textObject: Huesito
   priceObject: 3

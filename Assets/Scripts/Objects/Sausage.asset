@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageObject: {fileID: 621860603, guid: 46bb627c6a181ec458ee252be14e4412, type: 3}
   textObject: Salchicha
-  priceObject: 0
+  priceObject: 8
