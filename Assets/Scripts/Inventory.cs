@@ -10,12 +10,15 @@ public class Inventory : MonoBehaviour
 
     [SerializeField] private int moneyTotal = 50;
     [SerializeField] TextMeshProUGUI moneyText;
+    [SerializeField] TextMeshProUGUI moneyText2;
     [SerializeField] GameObject inventoryObject;
+
 
     private int numMaxObjects = 0;
     void Start()
     {
         moneyText.text = moneyTotal.ToString();
+        moneyText2.text = moneyTotal.ToString();
     }
     public void IcludeInInventory(int money, Image imageBag)
     {
@@ -29,6 +32,7 @@ public class Inventory : MonoBehaviour
             Image image = bag.GetComponent<Image>();
             image.sprite = imageBag.sprite;
             moneyText.text = moneyTotal.ToString();
+            moneyText2.text = moneyTotal.ToString();
         }
     }
 }
