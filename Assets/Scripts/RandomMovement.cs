@@ -6,8 +6,8 @@ public class RandomMovement : MonoBehaviour
 {
     [SerializeField] private float velocidadInicialX;
     [SerializeField] private float velocidadInicialY;
-    [SerializeField] private float intervaloCambioDirecciónMinimo = 1f;
-    [SerializeField] private float intervaloCambioDirecciónMaximo = 3f;
+    [SerializeField] private float intervaloCambioDireccionMinimo = 1f;
+    [SerializeField] private float intervaloCambioDireccionMaximo = 3f;
     [SerializeField] private float duracionPausaInicial = 2f;
     [SerializeField] private float duracionPausaRegular = 3f;
     [SerializeField] private float intervaloParadasRegulares = 10f;
@@ -15,12 +15,13 @@ public class RandomMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer spriteRendererDog;
-    private float tiempoSiguienteCambioDirección;
+    private float tiempoSiguienteCambioDireccion;
     private float tiempoFinPausa;
     private float tiempoSiguienteParadaRegular;
     private Vector2 direccionActual;
     private bool enPausa;
     private bool primerInicio = true;
+    private bool enEjecucion = true;
 
     private void Awake()
     {
@@ -28,7 +29,7 @@ public class RandomMovement : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         spriteRendererDog = GetComponentInChildren<SpriteRenderer>();
 
-        // Inicia el movimiento después de una pausa inicial
+        // Inicia el movimiento despuï¿½s de una pausa inicial
         if (primerInicio)
         {
             primerInicio = false;
@@ -42,68 +43,71 @@ public class RandomMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        animator.SetFloat("Walk", Mathf.Abs(rb.velocity.magnitude));
+        if(enEjecucion){
+            animator.SetFloat("Walk", Mathf.Abs(rb.velocity.magnitude));
 
-        if (!enPausa && Time.time >= tiempoSiguienteCambioDirección)
-        {
-            CambiarDirección();
-            CalcularSiguienteCambioDirección();
-        }
-
-        // Girar el sprite del perro según la dirección del movimiento
-        if (direccionActual.x > 0)
-        {
-            spriteRendererDog.flipX = true;
-        }
-        else if (direccionActual.x < 0)
-        {
-            spriteRendererDog.flipX = false;
-        }
-
-        // Verificar si es hora de hacer una parada regular
-        if (!enPausa && Time.time >= tiempoSiguienteParadaRegular)
-        {
-            ParadaRegular();
-        }
-
-        // Si está en pausa, verifica si la pausa ha terminado
-        if (enPausa && Time.time >= tiempoFinPausa)
-        {
-            enPausa = false;
-            // Solo calcular el siguiente cambio de dirección si no está en pausa
-            if (!enPausa)
+            if (!enPausa && Time.time >= tiempoSiguienteCambioDireccion)
             {
-                CalcularSiguienteCambioDirección();
+                CambiarDireccion();
+                CalcularSiguienteCambioDireccion();
+            }
+
+            // Girar el sprite del perro segï¿½n la direcciï¿½n del movimiento
+            if (direccionActual.x > 0)
+            {
+                spriteRendererDog.flipX = true;
+            }
+            else if (direccionActual.x < 0)
+            {
+                spriteRendererDog.flipX = false;
+            }
+
+            // Verificar si es hora de hacer una parada regular
+            if (!enPausa && Time.time >= tiempoSiguienteParadaRegular)
+            {
+                ParadaRegular();
+            }  
+
+            // Si estï¿½ en pausa, verifica si la pausa ha terminado
+            if (enPausa && Time.time >= tiempoFinPausa)
+            {
+                enPausa = false;
+                // Solo calcular el siguiente cambio de direcciï¿½n si no estï¿½ en pausa
+                if (!enPausa)
+                {
+                    CalcularSiguienteCambioDireccion();
+                }
             }
         }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Reflejar la dirección actual en relación con la normal de la colisión
+        // Reflejar la direcciï¿½n actual en relaciï¿½n con la normal de la colisiï¿½n
         direccionActual = Vector2.Reflect(direccionActual, collision.contacts[0].normal);
         rb.velocity = direccionActual;
 
-        // Calcular el ángulo entre la dirección actual y la dirección reflejada
+        // Calcular el ï¿½ngulo entre la direcciï¿½n actual y la direcciï¿½n reflejada
         float angle = Vector2.Angle(rb.velocity.normalized, direccionActual.normalized);
 
-        // Si el ángulo es menor que 90 grados, agregar o restar 90 grados según convenga
+        // Si el ï¿½ngulo es menor que 90 grados, agregar o restar 90 grados segï¿½n convenga
         if (angle < 90f)
         {
             // Seleccionar aleatoriamente si sumar o restar 90 grados
             int randomSign = Random.value > 0.5f ? 1 : -1;
-            // Ajustar la dirección sumando o restando 90 grados
+            // Ajustar la direcciï¿½n sumando o restando 90 grados
             direccionActual = Quaternion.Euler(0, 0, 90 * randomSign) * direccionActual;
             rb.velocity = direccionActual;
         }
     }
 
-    private void CambiarDirección()
+    private void CambiarDireccion()
     {
         direccionActual = Random.insideUnitCircle.normalized;
         rb.velocity = direccionActual;
 
-        // Inicia una pausa regular después de cambiar la dirección
+        // Inicia una pausa regular despuï¿½s de cambiar la direcciï¿½n
         float duracionPausa = duracionPausaRegular;
         tiempoFinPausa = Time.time + duracionPausa;
         enPausa = true;
@@ -122,7 +126,7 @@ public class RandomMovement : MonoBehaviour
         direccionActual = new Vector2(velocidadInicialX, velocidadInicialY).normalized;
         rb.velocity = direccionActual;
 
-        // Inicia una pausa regular después de iniciar el movimiento
+        // Inicia una pausa regular despuï¿½s de iniciar el movimiento
         float duracionPausa = duracionPausaRegular;
         tiempoFinPausa = Time.time + duracionPausa;
         enPausa = true;
@@ -131,9 +135,9 @@ public class RandomMovement : MonoBehaviour
         tiempoSiguienteParadaRegular = Time.time + intervaloParadasRegulares;
     }
 
-    private void CalcularSiguienteCambioDirección()
+    private void CalcularSiguienteCambioDireccion()
     {
-        tiempoSiguienteCambioDirección = Time.time + Random.Range(intervaloCambioDirecciónMinimo, intervaloCambioDirecciónMaximo);
+        tiempoSiguienteCambioDireccion = Time.time + Random.Range(intervaloCambioDireccionMinimo, intervaloCambioDireccionMaximo);
     }
 
     private void ParadaRegular()
@@ -145,5 +149,8 @@ public class RandomMovement : MonoBehaviour
 
         // Establece el siguiente tiempo para una parada regular
         tiempoSiguienteParadaRegular = Time.time + intervaloParadasRegulares;
+    }
+    public void stopScript(){
+        enEjecucion = false;
     }
 }
