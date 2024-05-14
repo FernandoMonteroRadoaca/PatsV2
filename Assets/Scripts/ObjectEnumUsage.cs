@@ -21,10 +21,12 @@ public class ObjectEnumUsage : MonoBehaviour
     {
         loveBar = GameObject.FindObjectOfType<LoveBar>();
 
+        UIShopManager uIShopManager = FindAnyObjectByType<UIShopManager>();
+        uIShopManager.totalObjects--;
+
         switch (objectsBag)
         {
             case ObjectsBag.LittleHunger:
-                loveBar.IncreaseHunger();
                 Debug.Log("Restore little hunger");
                 break;
             case ObjectsBag.MediumHunger:

@@ -61,8 +61,7 @@ public class ShopInventMenu : MonoBehaviour
     private void PauseBag()
     {
         pausedGame = true;
-        Vector3 newPos = new Vector3(Screen.width * 0.5f + inventoryMenu.GetComponent<RectTransform>().rect.width * 0.5f, inventoryMenu.transform.position.y, inventoryMenu.transform.position.z);
-        inventoryMenu.transform.position = newPos;
+        
         inventoryMenu.SetActive(true);
 
     }
