@@ -5812,15 +5812,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1438125315}
   lines:
-  - "\xA1Hola! Estos tres amigos peludos han sido parte de mi familia durante un
-    buen tiempo. Sin embargo, a medida que yo mismo envejezco, he notado que necesitan
-    m\xE1s espacio y atenci\xF3n de la que puedo proporcionarles."
-  - "Por eso, he decidido buscarles un nuevo hogar donde puedan recibir el amor y
-    cuidado que merecen. Dada mi edad y circunstancias, s\xE9 que no puedo ofrecerles
-    todo lo que necesitan. "
-  - "Al verte interesado en ellos, conf\xEDo en que puedes brindarles un hogar amoroso
-    y responsable.\xBFCu\xE1l de mis amigos peludos crees que ser\xEDa el adecuado
-    para ti?"
+  - "\xA1Hola encantado de poder conocerte al fin! Eres tal y como me imaginaba."
+  - "Como ya hablamos, estos tres cachorritos est\xE1n buscando una nueva familia
+    que les quiera, es muy amable por tu parte querer adoptar a uno de ellos."
+  - Estoy seguro de que elijas el que elijas va a llenar tu vida de mucho amor.
+  - "Haz click en el que m\xE1s te guste para llevartelo a su nuevo hogar."
   textSpeed: 0.01
 --- !u!1 &1747865978
 GameObject:
