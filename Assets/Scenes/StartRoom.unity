@@ -1418,7 +1418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loveImage: {fileID: 1487566252}
-  actualLove: 41.8
+  actualLove: 60
   maxLove: 100
   hungerImage: {fileID: 637471559}
   actualHunger: 50.5
