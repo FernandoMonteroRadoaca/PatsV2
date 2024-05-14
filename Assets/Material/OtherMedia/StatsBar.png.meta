@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d445e2671aef5eb4a8d9024d54d06a4a
+guid: 469cfe39c2d992f45a380850a25af432
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pug_0
+      name: StatsBar_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 40
+        y: 66
+        width: 66
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae9b66b6c2800664dabb02d27110467c
-      internalID: 2031829384
+      spriteID: 920488e2485970e4d8c14a5e5f8fb44b
+      internalID: 2124241509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pug_1
+      name: StatsBar_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
+        x: 109
+        y: 66
+        width: 9
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,146 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f37ff70ec29b374682ddb211dfd5604
-      internalID: 1717383259
+      spriteID: 5dc0c7334225b1641ba272262e97a3d1
+      internalID: 1879865634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pug_2
+      name: StatsBar_2
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 66
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe0e02683f299247b521f55cb7cccd5
+      internalID: -932026985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StatsBar_3
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 66
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ff528933cb964149a190691efe897ce
+      internalID: -1263322158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StatsBar_4
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 54
+        width: 66
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898961f1c371d7f4d8ce4e15ae57701d
+      internalID: 2126426511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StatsBar_5
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 54
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329c30caf2331cb4f982c644efaf34f7
+      internalID: -561368939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StatsBar_6
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 46
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60730cc3a4f459f48bd32b2acf87ef18
+      internalID: 1641064928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StatsBar_7
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 54
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7a6b8544447f554ea3801f8857ceb4a
+      internalID: 903046533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StatsBar_8
       rect:
         serializedVersion: 2
         x: 128
-        y: 0
-        width: 64
-        height: 64
+        y: 46
+        width: 6
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ada535e37bd55d478dcdc6d2e9cafec
-      internalID: 290545911
+      spriteID: d4e036be312068d4584d9f9ef063c706
+      internalID: 2125318596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pug_3
+      name: StatsBar_9
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 64
+        x: 40
+        y: 46
+        width: 66
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +313,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de3687d3b7d825a418ba1e691e81d5b3
-      internalID: -870536402
+      spriteID: 7b2ed56e617b7034b8afeada5cd4e645
+      internalID: 273179215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pug_4
+      name: StatsBar_10
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
+        x: 109
+        y: 46
+        width: 4
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +334,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0991e3a79ca17e04b993495e4245999b
-      internalID: -975655326
+      spriteID: 05c207d93f326a0459373703f75cce65
+      internalID: -26608875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pug_5
+      name: StatsBar_11
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
+        x: 119
+        y: 38
+        width: 9
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +355,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d55a7615e65e2f945a2317118fbdd61d
-      internalID: 1859422990
+      spriteID: 263c514120f4b9948bdb8e8ce98a1c47
+      internalID: 392681790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pug_6
+      name: StatsBar_12
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
+        x: 40
+        y: 38
+        width: 66
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +376,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8ff786dc115ab24895d22089cd2ab93
-      internalID: -817136918
+      spriteID: d0376a496ae0e9a49bd75dc5aed7e11c
+      internalID: 2059213272
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pug_7
+      name: StatsBar_13
       rect:
         serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 64
+        x: 109
+        y: 38
+        width: 9
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,155 +397,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53f27213f54cd634b810da6f56bf9c4e
-      internalID: -632970852
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pug_8
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fbb04e9392c8b5e4bb53f971e4b08e46
-      internalID: -346466277
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pug_9
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51bf7c32984cb7e41a1966ac79fe1180
-      internalID: -840461870
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pug_10
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9518c2ff89944d04abed7330751b8a84
-      internalID: 419813424
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pug_11
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a305d8a015c3ab4981de35c18d96696
-      internalID: 992206296
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pug_12
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b0b340b810aa4048b1e31c14402ae4b
-      internalID: -1887254052
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pug_13
-      rect:
-        serializedVersion: 2
-        x: 832
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4d63bc454fe2bd46baa666d172ccad4
-      internalID: 1629650291
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pug_14
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 27d3bb39bb07ded46a352eb26fe64bf4
-      internalID: -1444059735
+      spriteID: 5576316f71e60774fa0503b886baa1f8
+      internalID: -1080239163
       vertices: []
       indices: 
       edges: []
@@ -435,21 +414,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pug_0: 2031829384
-      Pug_1: 1717383259
-      Pug_10: 419813424
-      Pug_11: 992206296
-      Pug_12: -1887254052
-      Pug_13: 1629650291
-      Pug_14: -1444059735
-      Pug_2: 290545911
-      Pug_3: -870536402
-      Pug_4: -975655326
-      Pug_5: 1859422990
-      Pug_6: -817136918
-      Pug_7: -632970852
-      Pug_8: -346466277
-      Pug_9: -840461870
+      StatsBar_0: 2124241509
+      StatsBar_1: 1879865634
+      StatsBar_10: -26608875
+      StatsBar_11: 392681790
+      StatsBar_12: 2059213272
+      StatsBar_13: -1080239163
+      StatsBar_2: -932026985
+      StatsBar_3: -1263322158
+      StatsBar_4: 2126426511
+      StatsBar_5: -561368939
+      StatsBar_6: 1641064928
+      StatsBar_7: 903046533
+      StatsBar_8: 2125318596
+      StatsBar_9: 273179215
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
