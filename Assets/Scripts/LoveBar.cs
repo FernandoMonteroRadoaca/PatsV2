@@ -22,8 +22,8 @@ public class LoveBar : MonoBehaviour
     {
         actualLove = maxLove * 0.9f;
         // Call DecreaseLoveAndHunger method every 0.5 seconds for love and every second for hunger
-        InvokeRepeating("DecreaseLove", 0f, 0.5f);
-        InvokeRepeating("DecreaseHunger", 0f, 1f);
+        InvokeRepeating("DecreaseLove", 0f, 5.5f);
+        InvokeRepeating("DecreaseHunger", 0f, 10f);
 
         // Subscribe the GameOver method to the DeathDog event
         DeathDog += GameOver;
@@ -52,12 +52,26 @@ public class LoveBar : MonoBehaviour
             OnDeathDog();
         }
     }
-    public void IncreaseHunger()
+    public void IncreaseHungerBy30()
     {
-        actualHunger += 50.1f; 
-        actualHunger = Mathf.Clamp(actualHunger, 0f, maxHunger); 
+        IncreaseHunger(30f);
+    }
+
+    public void IncreaseHungerBy10()
+    {
+        IncreaseHunger(10f);
+    }
+
+    public void IncreaseHungerBy20()
+    {
+        IncreaseHunger(20f);
+    }
+
+    public void IncreaseHunger(float amount)
+    {
+        actualHunger += amount;
+        actualHunger = Mathf.Clamp(actualHunger, 0f, maxHunger);
         UpdateHungerImage();
-        
     }
 
     private void UpdateLoveImage()
@@ -67,6 +81,8 @@ public class LoveBar : MonoBehaviour
 
     private void UpdateHungerImage()
     {
+        Debug.Log("Update");
+        Debug.Log(actualHunger);
         hungerImage.fillAmount = actualHunger / maxHunger; // Update the hunger UI image
     }
 
