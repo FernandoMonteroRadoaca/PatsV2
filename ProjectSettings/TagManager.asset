@@ -7,6 +7,7 @@ TagManager:
   - Wall
   - Shop
   - Inventory
+  - Perro
   layers:
   - Default
   - TransparentFX
