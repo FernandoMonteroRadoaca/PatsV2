@@ -2413,6 +2413,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1600693035 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1299532952207166368, guid: 187b372cab958314db95be8687b5e64e, type: 3}
+  m_PrefabInstance: {fileID: 713611335}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1680999914
 GameObject:
   m_ObjectHideFlags: 0
@@ -2611,6 +2616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSlider: {fileID: 2108290869}
   fullScreen: {fileID: 409164565}
+  defaultVolume: 50
 --- !u!1 &1741959285
 GameObject:
   m_ObjectHideFlags: 0
@@ -2709,6 +2715,10 @@ MonoBehaviour:
   - Estoy seguro de que elijas el que elijas va a llenar tu vida de mucho amor.
   - "Haz click en el que m\xE1s te guste para llevartelo a su nuevo hogar."
   textSpeed: 0.01
+  objectsToDisable:
+  - {fileID: 1910663196}
+  - {fileID: 1600693035}
+  - {fileID: 478261760}
 --- !u!1 &1759220026
 GameObject:
   m_ObjectHideFlags: 0
@@ -2841,6 +2851,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1678aa5eae92074192a0fd802b63751, type: 3}
+--- !u!1 &1910663196 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2247746360745981683, guid: d1678aa5eae92074192a0fd802b63751, type: 3}
+  m_PrefabInstance: {fileID: 1885908321}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2071398484
 GameObject:
   m_ObjectHideFlags: 0

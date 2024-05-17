@@ -9,7 +9,7 @@ public class DialogueScript : MonoBehaviour
     public string[] lines;
     public float textSpeed = 0.1f;
     int index;
-
+    public GameObject[] objectsToDisable; 
 
     void Start()
     {
@@ -38,6 +38,12 @@ public class DialogueScript : MonoBehaviour
     {
         index = 0;
         StartCoroutine(WriteLine());
+        
+        // Desactivate interactive objects
+        /*foreach (GameObject obj in objectsToDisable)
+        {
+            obj.SetActive(false);
+        }*/
 
     }
 
@@ -63,6 +69,12 @@ public class DialogueScript : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
+
+            // Reactivate interactive objects
+            /*foreach (GameObject obj in objectsToDisable)
+            {
+                obj.SetActive(true);
+            }*/
         }
     }
 
