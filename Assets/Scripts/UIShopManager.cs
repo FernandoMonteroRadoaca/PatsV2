@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class UIShopManager : MonoBehaviour
 {
-    private int totalMoney;
+    public int totalMoney;
     public int totalObjects;
     private int priceObject;
 
@@ -18,6 +18,7 @@ public class UIShopManager : MonoBehaviour
     [SerializeField] private GameObject inventoryPanel;
     void Start()
     {
+        Debug.Log(totalMoney);
         totalMoney = moneyTotal;
         moneyText.text = moneyTotal.ToString();
     }
@@ -58,5 +59,11 @@ public class UIShopManager : MonoBehaviour
 
         
     }
+
+
+
+    //Save methods//////////////////////////////////////////////////////////////////////////////////////////
+
    
+
 }

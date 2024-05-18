@@ -20,6 +20,7 @@ public class LoveBar : MonoBehaviour
 
     private void Start()
     {
+        LoadMethod();
         actualLove = maxLove * 0.9f;
         // Call DecreaseLoveAndHunger method every 0.5 seconds for love and every second for hunger
         InvokeRepeating("DecreaseLove", 0f, 5.5f);
@@ -31,7 +32,7 @@ public class LoveBar : MonoBehaviour
 
     private void DecreaseLove()
     {
-        actualLove -= 0.9f; // Decrease love by 2 every 0.5 seconds
+        actualLove -= 4.9f; // Decrease love by 2 every 0.5 seconds
         actualLove = Mathf.Clamp(actualLove, 0f, maxLove); // Clamp the value between 0 and maxLove
         UpdateLoveImage();
         if (actualLove <= 0f)
@@ -43,7 +44,7 @@ public class LoveBar : MonoBehaviour
 
     private void DecreaseHunger()
     {
-        actualHunger -= 10.1f; // Decrease hunger by 1 every second
+        actualHunger -= 5.1f; // Decrease hunger by 1 every second
         actualHunger = Mathf.Clamp(actualHunger, 0f, maxHunger); // Clamp the value between 0 and maxHunger
         UpdateHungerImage();
         if (actualHunger <= 0f)
@@ -77,12 +78,13 @@ public class LoveBar : MonoBehaviour
     private void UpdateLoveImage()
     {
         loveImage.fillAmount = actualLove / maxLove; // Update the love UI image
+        Debug.Log("Actual love ---> " + actualLove);
     }
 
     private void UpdateHungerImage()
     {
-        Debug.Log("Update");
-        Debug.Log(actualHunger);
+       
+        Debug.Log( "Actual hunger ---> " + actualHunger);
         hungerImage.fillAmount = actualHunger / maxHunger; // Update the hunger UI image
     }
 
@@ -97,5 +99,32 @@ public class LoveBar : MonoBehaviour
     {
        
         
+    }
+    private void Update()
+    {
+        if(Input.GetKeyUp(KeyCode.G))
+        {
+            SaveMethod();
+        }
+        if (Input.GetKeyUp(KeyCode.C))
+        {
+            LoadMethod();
+        }
+    }
+
+    public void LoadMethod()
+    {
+        PlayerData playerData = SaveManager.LoadPlayerData();
+        actualLove = playerData.love;
+        UpdateLoveImage();
+        actualHunger = playerData.hunger ;
+        UpdateHungerImage();
+        Debug.Log("Loaded data");
+    }
+
+    public void SaveMethod()
+    {
+        SaveManager.SavePLayerData(this);
+        Debug.Log("Data saved");
     }
 }

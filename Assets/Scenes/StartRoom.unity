@@ -258,6 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfc37f4f72af4fe4fba7efbda615d67a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalMoney: 0
   totalObjects: 0
   moneyTotal: 100
   moneyText: {fileID: 613027275}
@@ -415,7 +416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &122073983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1221,7 +1222,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 433038436}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 437341603}
+        m_TargetAssemblyTypeName: LoveBar, Assembly-CSharp
+        m_MethodName: SaveMethod
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &433038436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5073,6 +5086,7 @@ MonoBehaviour:
   - Antes que nada no te olvides de guardar partida siempre que puedas
   - O si no tu progreso no guardado se perdera
   textSpeed: 0.01
+  objectsToDisable: []
 --- !u!114 &1510401159
 MonoBehaviour:
   m_ObjectHideFlags: 0
