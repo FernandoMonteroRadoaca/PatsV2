@@ -28,16 +28,24 @@ public class ObjectEnumUsage : MonoBehaviour
         {
             case ObjectsBag.LittleHunger:
                 Debug.Log("Restore little hunger");
-                /*if (loveBar != null)
+                if (loveBar != null)
                 {
-                    loveBar.IncreaseHungerBy30();
-                }*/
+                    loveBar.IncreaseHungerBy10();
+                }
                 break;
             case ObjectsBag.MediumHunger:
                 Debug.Log("Restore medium hunger");
+                if (loveBar != null)
+                {
+                    loveBar.IncreaseHungerBy20();
+                }
                 break;
             case ObjectsBag.BigHunger:
                 Debug.Log("Restore big hunger");
+                if (loveBar != null)
+                {
+                    loveBar.IncreaseHungerBy30();
+                }
                 break;
 
         }

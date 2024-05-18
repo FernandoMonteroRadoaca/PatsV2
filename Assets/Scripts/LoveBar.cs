@@ -43,7 +43,7 @@ public class LoveBar : MonoBehaviour
 
     private void DecreaseHunger()
     {
-        actualHunger -= 2.1f; // Decrease hunger by 1 every second
+        actualHunger -= 10.1f; // Decrease hunger by 1 every second
         actualHunger = Mathf.Clamp(actualHunger, 0f, maxHunger); // Clamp the value between 0 and maxHunger
         UpdateHungerImage();
         if (actualHunger <= 0f)
