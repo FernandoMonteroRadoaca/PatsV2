@@ -38,5 +38,10 @@ public class ButtonHandlerSave : MonoBehaviour
     {
         SaveManager.SavePlayerData(loveBar, shopManager);
         Debug.Log("Data saved");
+
+        // Debug Log to display saved inventory items
+        List<string> inventoryItems = shopManager.GetInventoryItems();
+        string itemsString = string.Join(", ", inventoryItems);
+        Debug.Log("Saved Inventory Items: " + itemsString);
     }
 }

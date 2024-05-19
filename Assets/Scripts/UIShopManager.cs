@@ -65,16 +65,10 @@ public class UIShopManager : MonoBehaviour
 
     public void RemoveObject(string article)
     {
-        for (int i = 0; i < inventoryItems.Count; i++)
-        {
-            if (inventoryItems[i] == article)
-            {
-                inventoryItems.RemoveAt(i);
-                totalObjects--;
-                break;
-            }
-        }
+        // Eliminar el objeto de la lista de inventario
+        inventoryItems.Remove(article);
 
+        // Destruir el objeto del inventario visual
         foreach (Transform child in inventoryPanel.transform)
         {
             if (child.name == article)
@@ -113,6 +107,12 @@ public class UIShopManager : MonoBehaviour
 
         foreach (string item in items)
         {
+            if (inventoryItems.Count >= 5)
+            {
+                Debug.LogWarning("El inventario está lleno. No se puede añadir más objetos.");
+                break;
+            }
+
             GameObject equipo = (GameObject)Resources.Load(item);
             if (equipo != null)
             {
