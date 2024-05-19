@@ -6,9 +6,10 @@ public class PlayerData
     public int money;
     
 
-    public PlayerData(LoveBar player)
+    public PlayerData(LoveBar player, UIShopManager uIShop)
     {
         love = player.actualLove;
         hunger = player.actualHunger;
+        money = uIShop.totalMoney;
     }
 }

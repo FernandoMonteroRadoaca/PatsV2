@@ -20,8 +20,9 @@ public class LoveBar : MonoBehaviour
 
     private void Start()
     {
-        LoadMethod();
+        
         actualLove = maxLove * 0.9f;
+        LoadMethod();
         // Call DecreaseLoveAndHunger method every 0.5 seconds for love and every second for hunger
         InvokeRepeating("DecreaseLove", 0f, 5.5f);
         InvokeRepeating("DecreaseHunger", 0f, 10f);
@@ -32,7 +33,7 @@ public class LoveBar : MonoBehaviour
 
     private void DecreaseLove()
     {
-        actualLove -= 4.9f; // Decrease love by 2 every 0.5 seconds
+        actualLove -= 2.9f; // Decrease love by 2 every 0.5 seconds
         actualLove = Mathf.Clamp(actualLove, 0f, maxLove); // Clamp the value between 0 and maxLove
         UpdateLoveImage();
         if (actualLove <= 0f)
@@ -75,13 +76,13 @@ public class LoveBar : MonoBehaviour
         UpdateHungerImage();
     }
 
-    private void UpdateLoveImage()
+    public void UpdateLoveImage()
     {
         loveImage.fillAmount = actualLove / maxLove; // Update the love UI image
         Debug.Log("Actual love ---> " + actualLove);
     }
 
-    private void UpdateHungerImage()
+   public void UpdateHungerImage()
     {
        
         Debug.Log( "Actual hunger ---> " + actualHunger);
@@ -115,16 +116,23 @@ public class LoveBar : MonoBehaviour
     public void LoadMethod()
     {
         PlayerData playerData = SaveManager.LoadPlayerData();
-        actualLove = playerData.love;
-        UpdateLoveImage();
-        actualHunger = playerData.hunger ;
-        UpdateHungerImage();
-        Debug.Log("Loaded data");
+        if (playerData != null)
+        {
+            actualLove = playerData.love;
+            actualHunger = playerData.hunger;
+            UpdateLoveImage();
+            UpdateHungerImage();
+            Debug.Log("Loaded data");
+        }
+        else
+        {
+            Debug.Log("No saved data found.");
+        }
     }
 
     public void SaveMethod()
     {
-        SaveManager.SavePLayerData(this);
+        SaveManager.SavePlayerData(this, FindObjectOfType<UIShopManager>());
         Debug.Log("Data saved");
     }
 }

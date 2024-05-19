@@ -12,15 +12,16 @@ public class UIShopManager : MonoBehaviour
     private int priceObject;
 
 
-    [SerializeField] private int moneyTotal = 100;
+    
     [SerializeField] TextMeshProUGUI moneyText;
 
     [SerializeField] private GameObject inventoryPanel;
     void Start()
     {
+        UpdateMoneyText();
         Debug.Log(totalMoney);
-        totalMoney = moneyTotal;
-        moneyText.text = moneyTotal.ToString();
+       
+       
     }
 
 
@@ -51,7 +52,7 @@ public class UIShopManager : MonoBehaviour
         {
             totalObjects++;
             totalMoney -= priceObject;
-            moneyText.text = totalMoney.ToString();
+            UpdateMoneyText();
             GameObject equipo = (GameObject)Resources.Load(article);
             Instantiate(equipo, Vector3.zero, Quaternion.identity, inventoryPanel.transform);
             
@@ -59,11 +60,15 @@ public class UIShopManager : MonoBehaviour
 
         
     }
+    public void UpdateMoneyText()
+    {
+        moneyText.text = totalMoney.ToString();
+    }
 
 
 
     //Save methods//////////////////////////////////////////////////////////////////////////////////////////
 
-   
+
 
 }
