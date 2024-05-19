@@ -19,11 +19,18 @@ public class ButtonHandlerSave : MonoBehaviour
         {
             loveBar.actualLove = playerData.love;
             loveBar.actualHunger = playerData.hunger;
-            shopManager.totalMoney = playerData.money;
+            shopManager.totalMoney = playerData.money + 20;
             loveBar.UpdateLoveImage();
             loveBar.UpdateHungerImage();
             shopManager.UpdateMoneyText();
+            shopManager.LoadInventoryItems(playerData.inventoryItems);
+            
+            
             Debug.Log("Loaded data");
+        }
+        else
+        {
+            Debug.Log("Error saving data");
         }
     }
 

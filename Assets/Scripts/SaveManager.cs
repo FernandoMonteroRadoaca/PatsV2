@@ -12,7 +12,7 @@ public static class SaveManager {
     BinaryFormatter binaryFormatter = new BinaryFormatter();
     binaryFormatter.Serialize(fileStream, playerData);
     fileStream.Close();
-}
+    }
 
 public static PlayerData LoadPlayerData(){
     string dataPath = Application.persistentDataPath + "/player.save";
