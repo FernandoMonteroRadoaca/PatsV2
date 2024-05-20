@@ -6,6 +6,7 @@ public class ButtonHandlerSave : MonoBehaviour
 {
     public LoveBar loveBar; // Referencia al objeto LoveBar en la escena
     public UIShopManager shopManager; // Referencia al objeto UIShopManager en la escena
+   
 
     private void Start()
     {
@@ -13,7 +14,9 @@ public class ButtonHandlerSave : MonoBehaviour
     }
 
     public void LoadMethod()
+
     {
+        
         PlayerData playerData = SaveManager.LoadPlayerData();
         if (playerData != null)
         {
@@ -24,8 +27,12 @@ public class ButtonHandlerSave : MonoBehaviour
             loveBar.UpdateHungerImage();
             shopManager.UpdateMoneyText();
             shopManager.LoadInventoryItems(playerData.inventoryItems);
-            
-            
+
+            if (PlayerPrefs.HasKey("SelectedDog"))
+            {
+                playerData.selectedDog = PlayerPrefs.GetString("SelectedDog");
+                SaveManager.SavePlayerData(playerData);
+            }
             Debug.Log("Loaded data");
         }
         else
@@ -44,4 +51,6 @@ public class ButtonHandlerSave : MonoBehaviour
         string itemsString = string.Join(", ", inventoryItems);
         Debug.Log("Saved Inventory Items: " + itemsString);
     }
+
+    
 }

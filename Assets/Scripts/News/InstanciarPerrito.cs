@@ -8,6 +8,15 @@ public class InstanciarPerrito : MonoBehaviour
     {
         string nombrePerritoSeleccionado = PlayerPrefs.GetString("PerritoSeleccionado");
 
+
+
+
+
+        // Guardar el nombre del perrito seleccionado en PlayerData
+        // Guardar el nombre del perrito seleccionado en PlayerPrefs
+        PlayerPrefs.SetString("SelectedDog", nombrePerritoSeleccionado);
+        PlayerPrefs.Save();
+
         // Busca el índice del perrito seleccionado en el array de prefabs
         int indicePerritoSeleccionado = -1;
         for (int i = 0; i < prefabsPerritos.Length; i++)

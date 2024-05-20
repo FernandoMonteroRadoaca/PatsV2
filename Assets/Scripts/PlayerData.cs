@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 [System.Serializable]
 public class PlayerData 
@@ -7,7 +8,8 @@ public class PlayerData
     public float hunger;
     public int money;
     public List<string> inventoryItems; // Lista de nombres de los objetos en el inventario
-
+    public string selectedDog;
+    
 
     public PlayerData(LoveBar player, UIShopManager uIShop)
     {
@@ -15,5 +17,7 @@ public class PlayerData
         hunger = player.actualHunger;
         money = uIShop.totalMoney;
         inventoryItems = uIShop.GetInventoryItems();
+        
+        
     }
 }
