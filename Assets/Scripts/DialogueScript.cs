@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class DialogueScript : MonoBehaviour
 {
@@ -9,10 +10,12 @@ public class DialogueScript : MonoBehaviour
     public string[] lines;
     public float textSpeed = 0.1f;
     int index;
-    public GameObject[] objectsToDisable; 
+    public GameObject[] objectsToDisable;
+    public GameObject settings;
 
     void Start()
     {
+        settings.SetActive(false);
         dialogueText .text = string.Empty;
         StartDialogue();
     }
@@ -38,13 +41,7 @@ public class DialogueScript : MonoBehaviour
     {
         index = 0;
         StartCoroutine(WriteLine());
-        
-        // Desactivate interactive objects
-        /*foreach (GameObject obj in objectsToDisable)
-        {
-            obj.SetActive(false);
-        }*/
-
+       
     }
 
     IEnumerator WriteLine()
@@ -62,13 +59,16 @@ public class DialogueScript : MonoBehaviour
     {
         if(index < lines.Length - 1)
         {
+            
             index++;
             dialogueText.text = string.Empty;
             StartCoroutine (WriteLine());
+            
         }
         else
         {
             gameObject.SetActive(false);
+            settings.SetActive(true);
 
             // Reactivate interactive objects
             /*foreach (GameObject obj in objectsToDisable)
