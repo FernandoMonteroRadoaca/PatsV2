@@ -3642,6 +3642,7 @@ GameObject:
   - component: {fileID: 1169123407}
   - component: {fileID: 1169123406}
   - component: {fileID: 1169123405}
+  - component: {fileID: 1169123410}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3748,6 +3749,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1169123410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169123404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667b846d51a1843459bf8eb97b6ac93c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSlider: {fileID: 1018474939}
+  fullScreen: {fileID: 1503043460}
+  defaultVolume: 50
 --- !u!1 &1176672986
 GameObject:
   m_ObjectHideFlags: 0

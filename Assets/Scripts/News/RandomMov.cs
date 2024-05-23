@@ -22,11 +22,19 @@ public class RandomMov : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    
+    public float minBarkInterval = 3f; // Tiempo mínimo entre ladridos
+    public float maxBarkInterval = 7f; // Tiempo máximo entre ladridos
+    private AudioSource audioSource;
+    private float barkTimer;
+
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         StartCoroutine(CambiarMovimiento());
+        ResetBarkTimer();
     }
 
     void Update()
@@ -62,6 +70,14 @@ public class RandomMov : MonoBehaviour
                 animator.SetBool("Arriba", false);
                 animator.SetBool("Abajo", false);
                 animator.SetBool("Parado", false);
+                barkTimer -= Time.deltaTime;
+                if (barkTimer <= 0)
+                {
+                    // Reproducir el sonido de ladrido
+                    audioSource.Play();
+                    // Reiniciar el temporizador
+                    ResetBarkTimer();
+                }
             }
             else
             {
@@ -77,6 +93,10 @@ public class RandomMov : MonoBehaviour
         {
             HacerParada();
         }
+    }
+    void ResetBarkTimer()
+    {
+        barkTimer = Random.Range(minBarkInterval, maxBarkInterval);
     }
 
     IEnumerator CambiarMovimiento()
