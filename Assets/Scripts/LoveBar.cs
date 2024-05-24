@@ -68,6 +68,11 @@ public class LoveBar : MonoBehaviour
     {
         IncreaseHunger(20f);
     }
+    public void IncreaseLove(float amount){
+        actualLove += amount;
+        actualLove = Mathf.Clamp(actualLove, 0f, maxLove);
+        UpdateLoveImage();
+    }
 
     public void IncreaseHunger(float amount)
     {

@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 8072653168471628373}
   - component: {fileID: 6533272327055401574}
   - component: {fileID: 2653607540452230830}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Dog
-  m_TagString: Perro
+  m_TagString: Dog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,11 +102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a7a98806b9787542afc658d9375e50e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destino: {x: 0, y: 1.8}
-  velocidadMovimiento: 2
-  duracionAnimacion: 2
-  escalaMaxima: 5
-  spriteFinal: {fileID: -1672672963, guid: 9c69277ff74b0f242b8b88cfd892f522, type: 3}
+  destination: {x: 0, y: 1.8}
+  movementSpeed: 2
+  animationDuration: 2
+  maxScale: 5
+  finalSprite: {fileID: -1672672963, guid: 9c69277ff74b0f242b8b88cfd892f522, type: 3}
 --- !u!114 &2464976684920938915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,17 +119,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4e29e724c4b6144190ff808f7b7c3ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadMinima: 2
-  velocidadMaxima: 5
-  duracionMovimientoMinima: 2
-  duracionMovimientoMaxima: 5
-  duracionPausaMinima: 1
-  duracionPausaMaxima: 3
-  limiteIzquierda: -8
-  limiteDerecha: 8
-  limiteSuelo: -3
-  limiteAltura: -1
-  barkInterval: 5
+  minSpeed: 2
+  maxSpeed: 5
+  minMovementDuration: 2
+  maxMovementDuration: 5
+  minPauseDuration: 1
+  maxPauseDuration: 3
+  leftLimit: -8
+  rightLimit: 8
+  bottomLimit: -3
+  topLimit: -1
 --- !u!95 &6275519372899546342
 Animator:
   serializedVersion: 5
@@ -190,10 +189,10 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
