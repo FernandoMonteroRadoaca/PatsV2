@@ -10,7 +10,7 @@ public class FondoMov : MonoBehaviour
     public GameObject[] prefabs;
     public Vector2 spawnPosition;
     public float timeToChangeScene = 10f; // Tiempo en segundos para cambiar de escena
-    public string nextSceneName; // Nombre de la siguiente escena
+    public string nextSceneName = "StartRoom"; // Nombre de la siguiente escena
     
 
     void Start()
@@ -41,6 +41,7 @@ public class FondoMov : MonoBehaviour
         }
 
         // Iniciar la coroutine para cambiar de escena después de un tiempo
+        
         
     }
 
