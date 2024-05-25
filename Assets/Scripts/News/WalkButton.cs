@@ -1,80 +1,70 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System;
 
 public class WalkButton : MonoBehaviour
 {
-    public GameObject panel; // Asigna el panel en el Inspector
-    public float displayTime = 2f; // Tiempo que el panel estará visible
-    public Button button; // Asigna el botón en el Inspector
+    public GameObject panel; // Panel que se va a mostrar y ocultar
+    public RawImage rawImage; // RawImage que se va a mover
+    public float displayDuration = 3f; // Duración en segundos que el panel estará visible
+    public float scrollSpeed = 0.05f; // Velocidad del movimiento del RawImage en el eje X
 
-    private bool isPaused = false;
-    private CanvasGroup panelCanvasGroup;
-    private Button[] allButtons;
+    public Animator animator;
+    private String dogName;
+    private LoveBar loveBar;
+    private bool showing = false;
 
-    void Start()
+    // Método que se llama cuando se hace clic en el botón
+
+    public void OnWalkButtonClick()
     {
-        button.onClick.AddListener(ShowPanel);
-        panel.SetActive(false); // Asegúrate de que el panel esté desactivado al inicio
-
-        panelCanvasGroup = panel.GetComponent<CanvasGroup>();
-        if (panelCanvasGroup == null)
-        {
-            panelCanvasGroup = panel.AddComponent<CanvasGroup>();
-        }
-
-        allButtons = FindObjectsOfType<Button>();
-    }
-
-    void ShowPanel()
-    {
-        StartCoroutine(DisplayPanel());
-    }
-
-    IEnumerator DisplayPanel()
-    {
+        showing = true;
         panel.SetActive(true);
-        PauseGame();
+        StartCoroutine(HidePanelAfterTime(displayDuration));
+    }
 
-        // Desactiva la interactividad de todos los botones excepto el del panel
-        foreach (Button btn in allButtons)
-        {
-            if (btn != button)
-            {
-                btn.interactable = false;
-            }
-        }
-
-        yield return new WaitForSecondsRealtime(displayTime); // Usa WaitForSecondsRealtime para respetar la pausa
-
+    // Corrutina que oculta el panel después de un tiempo
+    private IEnumerator HidePanelAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
         panel.SetActive(false);
-        ResumeGame();
+        showing = false;
+        loveBar = GameObject.FindObjectOfType<LoveBar>();
+        loveBar.IncreaseLove(10);
 
-        // Reactiva la interactividad de todos los botones
-        foreach (Button btn in allButtons)
+
+    }
+
+    // Método Update que se llama una vez por frame
+    void Update()
+    {
+        // Mover el RawImage en el eje X
+        if (rawImage != null)
         {
-            if (btn != button)
+            Rect uvRect = rawImage.uvRect;
+            uvRect.x += scrollSpeed * Time.deltaTime;
+            rawImage.uvRect = uvRect;
+        }
+
+        if (showing)
+        {
+            dogName = PlayerPrefs.GetString("SelectedDog");
+            switch (dogName)
             {
-                btn.interactable = true;
+                case "Dog":
+                    animator.SetBool("Dog", true);
+                    break;
+                case "Lab":
+                    animator.SetBool("Lab", true);
+                    break;
+                case "Pug":
+                    animator.SetBool("Pug", true);
+                    break;
+                default:
+                    Debug.LogWarning("Dog name not recognized: " + dogName);
+                    break;
             }
-        }
-    }
-
-    void PauseGame()
-    {
-        if (!isPaused)
-        {
-            Time.timeScale = 0f; // Pausa el juego
-            isPaused = true;
-        }
-    }
-
-    void ResumeGame()
-    {
-        if (isPaused)
-        {
-            Time.timeScale = 1f; // Reanuda el juego
-            isPaused = false;
         }
     }
 }

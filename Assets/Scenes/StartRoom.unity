@@ -2879,7 +2879,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1169123413}
         m_TargetAssemblyTypeName: WalkButton, Assembly-CSharp
-        m_MethodName: OnWalkButtonClicked
+        m_MethodName: OnWalkButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3837,7 +3837,6 @@ GameObject:
   - component: {fileID: 1169123411}
   - component: {fileID: 1169123412}
   - component: {fileID: 1169123413}
-  - component: {fileID: 1169123414}
   m_Layer: 5
   m_Name: CanvasButtons
   m_TagString: Untagged
@@ -4008,24 +4007,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1169123404}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b19db7ae562418748b6b6406712d6978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1169123414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169123404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d56cd28830574048ba1fc03662bd37f, type: 3}
+  m_Script: {fileID: 11500000, guid: 87f249be823cad645993efab5cc5f68e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 1769953967}
-  displayTime: 2
-  button: {fileID: 809313444}
+  rawImage: {fileID: 453032262}
+  displayDuration: 3
+  scrollSpeed: 0.05
+  animator: {fileID: 1993999257}
 --- !u!1 &1176672986
 GameObject:
   m_ObjectHideFlags: 0
@@ -7199,14 +7188,13 @@ GameObject:
   - component: {fileID: 1769953968}
   - component: {fileID: 1769953970}
   - component: {fileID: 1769953969}
-  - component: {fileID: 1769953971}
   m_Layer: 5
   m_Name: WalkPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1769953968
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7266,23 +7254,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769953967}
   m_CullTransparentMesh: 1
---- !u!114 &1769953971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769953967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 987b7987a59e97c469c4583078bfab80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel: {fileID: 1769953967}
-  openPanelButton: {fileID: 0}
-  backgroundRawImage: {fileID: 453032262}
-  dogAnimator: {fileID: 1993999257}
-  scrollSpeed: 0.1
 --- !u!1 &1787166606
 GameObject:
   m_ObjectHideFlags: 0
