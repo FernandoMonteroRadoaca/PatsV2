@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ButtonHandlerSave : MonoBehaviour
 {
     public LoveBar loveBar; // Referencia al objeto LoveBar en la escena
     public UIShopManager shopManager; // Referencia al objeto UIShopManager en la escena
-   
+    public TextMeshProUGUI notificationText; //Referencia al texto guardando..
 
     private void Start()
     {
@@ -50,7 +51,14 @@ public class ButtonHandlerSave : MonoBehaviour
         List<string> inventoryItems = shopManager.GetInventoryItems();
         string itemsString = string.Join(", ", inventoryItems);
         Debug.Log("Saved Inventory Items: " + itemsString);
+        // Llama a la corrutina para mostrar la notificación
+        StartCoroutine(ShowNotification());
+    }
+    IEnumerator ShowNotification()
+    {
+        notificationText.gameObject.SetActive(true);  // Activa el TextMeshPro
+        yield return new WaitForSeconds(1.0f);  // Espera 1 segundo
+        notificationText.gameObject.SetActive(false);  // Desactiva el TextMeshPro
     }
 
-    
 }
