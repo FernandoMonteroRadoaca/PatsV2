@@ -6,7 +6,7 @@ public class ShowerButton : MonoBehaviour
     public GameObject bubblePrefab;
     public Vector2 spawnPoint;
     public int numBubbles = 10;
-    public LoveBar loveBar;
+    private LoveBar loveBar;
     public Image customCursor; // Referencia a la imagen UI que actuará como cursor
     public Texture2D spongeCursor; // Textura para el cursor
     private bool canClick = true;
