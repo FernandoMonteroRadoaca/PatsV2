@@ -113,10 +113,10 @@ TextureImporter:
       name: StatsBar_0
       rect:
         serializedVersion: 2
-        x: 40
-        y: 66
-        width: 66
-        height: 7
+        x: 5
+        y: 3
+        width: 7
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 920488e2485970e4d8c14a5e5f8fb44b
-      internalID: 2124241509
+      spriteID: d5f358a7fe1bae34aaf98db8d644ebf2
+      internalID: 1883206025
       vertices: []
       indices: 
       edges: []
@@ -134,10 +134,10 @@ TextureImporter:
       name: StatsBar_1
       rect:
         serializedVersion: 2
-        x: 109
-        y: 66
-        width: 9
-        height: 7
+        x: 17
+        y: 3
+        width: 7
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dc0c7334225b1641ba272262e97a3d1
-      internalID: 1879865634
+      spriteID: f2affdb2cbb72d44cbaf755db97a3f3a
+      internalID: -1026579656
       vertices: []
       indices: 
       edges: []
@@ -155,10 +155,10 @@ TextureImporter:
       name: StatsBar_2
       rect:
         serializedVersion: 2
-        x: 119
-        y: 66
-        width: 4
-        height: 7
+        x: 25
+        y: 3
+        width: 7
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fe0e02683f299247b521f55cb7cccd5
-      internalID: -932026985
+      spriteID: 818cf9cc4cd6e854783e2aba71b7248d
+      internalID: 846171736
       vertices: []
       indices: 
       edges: []
@@ -176,10 +176,10 @@ TextureImporter:
       name: StatsBar_3
       rect:
         serializedVersion: 2
-        x: 124
-        y: 66
-        width: 9
-        height: 7
+        x: 33
+        y: 3
+        width: 7
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,218 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ff528933cb964149a190691efe897ce
-      internalID: -1263322158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: StatsBar_4
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 54
-        width: 66
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 898961f1c371d7f4d8ce4e15ae57701d
-      internalID: 2126426511
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: StatsBar_5
-      rect:
-        serializedVersion: 2
-        x: 109
-        y: 54
-        width: 4
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 329c30caf2331cb4f982c644efaf34f7
-      internalID: -561368939
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: StatsBar_6
-      rect:
-        serializedVersion: 2
-        x: 114
-        y: 46
-        width: 9
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60730cc3a4f459f48bd32b2acf87ef18
-      internalID: 1641064928
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: StatsBar_7
-      rect:
-        serializedVersion: 2
-        x: 122
-        y: 54
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7a6b8544447f554ea3801f8857ceb4a
-      internalID: 903046533
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: StatsBar_8
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 46
-        width: 6
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4e036be312068d4584d9f9ef063c706
-      internalID: 2125318596
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: StatsBar_9
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 46
-        width: 66
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b2ed56e617b7034b8afeada5cd4e645
-      internalID: 273179215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: StatsBar_10
-      rect:
-        serializedVersion: 2
-        x: 109
-        y: 46
-        width: 4
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05c207d93f326a0459373703f75cce65
-      internalID: -26608875
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: StatsBar_11
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 38
-        width: 9
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 263c514120f4b9948bdb8e8ce98a1c47
-      internalID: 392681790
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: StatsBar_12
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 38
-        width: 66
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d0376a496ae0e9a49bd75dc5aed7e11c
-      internalID: 2059213272
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: StatsBar_13
-      rect:
-        serializedVersion: 2
-        x: 109
-        y: 38
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5576316f71e60774fa0503b886baa1f8
-      internalID: -1080239163
+      spriteID: 164908fa6c58e6743b8458da04166618
+      internalID: -750922580
       vertices: []
       indices: 
       edges: []
@@ -414,20 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      StatsBar_0: 2124241509
-      StatsBar_1: 1879865634
-      StatsBar_10: -26608875
-      StatsBar_11: 392681790
-      StatsBar_12: 2059213272
-      StatsBar_13: -1080239163
-      StatsBar_2: -932026985
-      StatsBar_3: -1263322158
-      StatsBar_4: 2126426511
-      StatsBar_5: -561368939
-      StatsBar_6: 1641064928
-      StatsBar_7: 903046533
-      StatsBar_8: 2125318596
-      StatsBar_9: 273179215
+      StatsBar_0: 1883206025
+      StatsBar_1: -1026579656
+      StatsBar_2: 846171736
+      StatsBar_3: -750922580
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
