@@ -7,6 +7,7 @@ public class PetButton : MonoBehaviour
     public Button startPettingButton; // Botón para empezar a acariciar
     public Image pettingArea; // Área UI donde acariciar (perro)
     private LoveBar loveBar;
+    private LivingRoomUIManager uIManager;
 
     public float pettingTimeRequired = 2.0f; // Tiempo necesario para acariciar
     private float pettingTime = 0.0f;
@@ -18,6 +19,7 @@ public class PetButton : MonoBehaviour
         customCursorImage.gameObject.SetActive(false); // Inicialmente desactivar la imagen del cursor personalizado
         pettingArea.gameObject.SetActive(false); // Inicialmente desactivar el área de acariciamiento
         Cursor.visible = true; // Asegurarse de que el cursor del sistema esté visible al inicio
+        uIManager = FindObjectOfType<LivingRoomUIManager>();
     }
 
     void Update()
@@ -52,6 +54,7 @@ public class PetButton : MonoBehaviour
 
     void StartPetting()
     {
+        uIManager.DesactivateButtons();
         Cursor.visible = false; // Hacer invisible el cursor del sistema
         customCursorImage.gameObject.SetActive(true); // Activar la imagen del cursor personalizado
         pettingArea.gameObject.SetActive(true); // Activar el área de acariciamiento
@@ -68,6 +71,7 @@ public class PetButton : MonoBehaviour
         pettingTime = 0.0f;
         loveBar.IncreaseLove(10);
         Debug.Log("Has dejado de acariciar al perro.");
+        uIManager.ActivateButtons();
     }
 
     private bool IsPointerOverUIObject(RectTransform rectTransform, Vector2 screenPosition)

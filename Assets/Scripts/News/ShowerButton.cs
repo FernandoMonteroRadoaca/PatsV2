@@ -10,11 +10,13 @@ public class ShowerButton : MonoBehaviour
     public Image customCursor; // Referencia a la imagen UI que actuará como cursor
     public Texture2D spongeCursor; // Textura para el cursor
     private bool canClick = true;
+    private LivingRoomUIManager uIManager;
 
-    private void Start()
+    void Start()
     {
         // Asegúrate de que el cursor personalizado está inactivo al inicio
         customCursor.gameObject.SetActive(false);
+        uIManager = FindObjectOfType<LivingRoomUIManager>();
     }
 
     private void Update()
@@ -33,6 +35,7 @@ public class ShowerButton : MonoBehaviour
         {
             canClick = false;
             // Mostrar el cursor personalizado y ocultar el cursor del sistema
+            uIManager.DesactivateButtons();
             Cursor.visible = false;
             customCursor.gameObject.SetActive(true);
             customCursor.sprite = Sprite.Create(spongeCursor, new Rect(0, 0, spongeCursor.width, spongeCursor.height), new Vector2(0.5f, 0.5f));
@@ -64,6 +67,7 @@ public class ShowerButton : MonoBehaviour
             customCursor.gameObject.SetActive(false);
             canClick = true;
             numBubbles = 10; // Reinicia el contador de burbujas
+            uIManager.ActivateButtons();
         }
     }
 }

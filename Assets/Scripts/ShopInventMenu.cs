@@ -10,6 +10,7 @@ public class ShopInventMenu : MonoBehaviour
     [SerializeField] private GameObject inventoryMenu;
     private bool pausedGame = false;
 
+    private LivingRoomUIManager uIManager;
 
 
 
@@ -17,10 +18,11 @@ public class ShopInventMenu : MonoBehaviour
 
     private void Start()
     {
-        // Guardar la posición original del menú de inventario al inicio del juego
+        // Guardar la posiciï¿½n original del menï¿½ de inventario al inicio del juego
         originalInventoryMenuPosition = inventoryMenu.transform.position;
+        uIManager = FindObjectOfType<LivingRoomUIManager>();
     }
-    // Método público que se llamará cuando se presione el botón shopButton.
+    // Mï¿½todo pï¿½blico que se llamarï¿½ cuando se presione el botï¿½n shopButton.
     public void OnShopButtonPressed()
     {
         if (pausedGame)
@@ -36,10 +38,12 @@ public class ShopInventMenu : MonoBehaviour
         if (pausedGame)
         {
             ResetBag();
+            uIManager.ActivateButtons();
         }
         else
         {
             PauseBag();
+            uIManager.DesactivateButtonsWthoutInventory();
         }
     }
 
@@ -71,7 +75,7 @@ public class ShopInventMenu : MonoBehaviour
         Time.timeScale = 1f;
         shopButton.SetActive(true);       
         inventoryMenu.SetActive(false);
-        // Restaurar la posición original del menú de inventario
+        // Restaurar la posiciï¿½n original del menï¿½ de inventario
         inventoryMenu.transform.position = originalInventoryMenuPosition;
     }
 }

@@ -25,6 +25,7 @@ public class ClickDog : MonoBehaviour
 
     private void OnMouseDown()
     {
+        Debug.LogWarning("Has Hecho Clic");
         if (SceneManager.GetActiveScene().name == "StartRoom")
         {
             if (!atDestination)
@@ -88,7 +89,7 @@ public class ClickDog : MonoBehaviour
                 // Show buttons when destination is reached
                 if (uiManager != null)
                 {
-                    uiManager.SetButtonsActive(true);
+                    uiManager.ShowButtons(this);
                 }
             }
 
@@ -136,6 +137,7 @@ public class ClickDog : MonoBehaviour
         atDestination = false;
         transform.localScale = new Vector3(1f, 1f, 1f); // Reset the scale
         animator.enabled = true; // Enable the animator
+        collider2D.enabled = true;
 
         // Hide buttons when moving back
         if (uiManager != null)

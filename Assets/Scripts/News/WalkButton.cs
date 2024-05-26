@@ -15,12 +15,16 @@ public class WalkButton : MonoBehaviour
     private LoveBar loveBar;
     private bool showing = false;
     private UIShopManager uIShopManager;
+    private LivingRoomUIManager uIManager;
 
 
     // Método que se llama cuando se hace clic en el botón
-
+    void Start(){
+        uIManager = FindObjectOfType<LivingRoomUIManager>();
+    }
     public void OnWalkButtonClick()
     {
+        uIManager.DesactivateButtons();
         showing = true;
         panel.SetActive(true);
         StartCoroutine(HidePanelAfterTime(displayDuration));
@@ -37,7 +41,7 @@ public class WalkButton : MonoBehaviour
         loveBar.DecreaseHungerBy(10);
         uIShopManager = GameObject.FindAnyObjectByType<UIShopManager>();
         uIShopManager.IncreaseMoney(20);
-
+        uIManager.ActivateButtons();
 
     }
 
