@@ -14,6 +14,8 @@ public class WalkButton : MonoBehaviour
     private String dogName;
     private LoveBar loveBar;
     private bool showing = false;
+    private UIShopManager uIShopManager;
+
 
     // Método que se llama cuando se hace clic en el botón
 
@@ -32,6 +34,9 @@ public class WalkButton : MonoBehaviour
         showing = false;
         loveBar = GameObject.FindObjectOfType<LoveBar>();
         loveBar.IncreaseLove(10);
+        loveBar.DecreaseHungerBy(10);
+        uIShopManager = GameObject.FindAnyObjectByType<UIShopManager>();
+        uIShopManager.IncreaseMoney(20);
 
 
     }

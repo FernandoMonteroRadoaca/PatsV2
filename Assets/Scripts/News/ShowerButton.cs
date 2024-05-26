@@ -6,24 +6,42 @@ public class ShowerButton : MonoBehaviour
     public GameObject bubblePrefab;
     public Vector2 spawnPoint;
     public int numBubbles = 10;
-
-    private bool canClick = true;
-    public Texture2D spongeCursor;
     public LoveBar loveBar;
+    public Image customCursor; // Referencia a la imagen UI que actuará como cursor
+    public Texture2D spongeCursor; // Textura para el cursor
+    private bool canClick = true;
+
+    private void Start()
+    {
+        // Asegúrate de que el cursor personalizado está inactivo al inicio
+        customCursor.gameObject.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (!canClick && customCursor.gameObject.activeSelf)
+        {
+            // Actualiza la posición del cursor personalizado para que siga al cursor del ratón
+            Vector2 cursorPosition = Input.mousePosition;
+            customCursor.transform.position = cursorPosition;
+        }
+    }
 
     public void OnShowerButtonClicked()
     {
         if (canClick)
         {
-            Cursor.SetCursor(spongeCursor, Vector2.zero, CursorMode.Auto);
             canClick = false;
+            // Mostrar el cursor personalizado y ocultar el cursor del sistema
+            Cursor.visible = false;
+            customCursor.gameObject.SetActive(true);
+            customCursor.sprite = Sprite.Create(spongeCursor, new Rect(0, 0, spongeCursor.width, spongeCursor.height), new Vector2(0.5f, 0.5f));
             SpawnBubbles();
         }
     }
 
     private void SpawnBubbles()
     {
-        
         for (int i = 0; i < numBubbles; i++)
         {
             Vector2 randomOffset = Random.insideUnitCircle * 1.5f; // Ajusta el radio de spawn de las burbujas
@@ -39,14 +57,13 @@ public class ShowerButton : MonoBehaviour
         numBubbles--;
         if (numBubbles <= 0)
         {
-            // Incrementa el afecto por 20
-            loveBar.IncreaseLove(10);
+            loveBar.IncreaseLove(10); // Incrementa el afecto por 20
 
             // Resetea el estado del botón
-            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+            Cursor.visible = true;
+            customCursor.gameObject.SetActive(false);
             canClick = true;
-            // Reinicia el contador de burbujas
-            numBubbles = 10;
+            numBubbles = 10; // Reinicia el contador de burbujas
         }
     }
 }

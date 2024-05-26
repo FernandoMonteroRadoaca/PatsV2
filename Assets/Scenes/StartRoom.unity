@@ -3978,7 +3978,7 @@ MonoBehaviour:
   bubblePrefab: {fileID: 7391287850818555215, guid: 6d8d5e4f94fb7984f85fb22f91319c4c, type: 3}
   spawnPoint: {x: 0, y: 1.8}
   numBubbles: 10
-  spongeCursor: {fileID: 2800000, guid: 05ecc831bbae8d441ab8666d104baf03, type: 3}
+  spongeCursor: {fileID: 2800000, guid: 7cb1da8993bac8a4a83131951e09ce7c, type: 3}
   loveBar: {fileID: 0}
 --- !u!114 &1169123412
 MonoBehaviour:

@@ -54,6 +54,11 @@ public class LoveBar : MonoBehaviour
             OnDeathDog();
         }
     }
+    public void DecreaseHungerBy(float amount){
+        actualHunger -= amount;
+        actualHunger = Mathf.Clamp(actualHunger, 0f, maxHunger);
+        UpdateHungerImage();
+    }
     public void IncreaseHungerBy30()
     {
         IncreaseHunger(30f);

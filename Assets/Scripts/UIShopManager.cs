@@ -53,14 +53,22 @@ public class UIShopManager : MonoBehaviour
             if (equipo != null)
             {
                 GameObject newItem = Instantiate(equipo, Vector3.zero, Quaternion.identity, inventoryPanel.transform);
-                newItem.name = article; // Asignar el nombre del objeto para su identificación
-                inventoryItems.Add(article); // Añadir el nombre del objeto a la lista de inventario
+                newItem.name = article; // Asignar el nombre del objeto para su identificaciï¿½n
+                inventoryItems.Add(article); // Aï¿½adir el nombre del objeto a la lista de inventario
             }
             else
             {
                 Debug.LogError("No se pudo cargar el objeto: " + article);
             }
         }
+    }
+    public void decreaseMoney(int amount){
+        totalMoney -= amount;
+        UpdateMoneyText();
+    }
+    public void IncreaseMoney(int amount){
+        totalMoney += amount;
+        UpdateMoneyText();
     }
 
     public void RemoveObject(string article)
@@ -84,13 +92,13 @@ public class UIShopManager : MonoBehaviour
         moneyText.text = totalMoney.ToString();
     }
 
-    // Método para obtener la lista de objetos del inventario
+    // Mï¿½todo para obtener la lista de objetos del inventario
     public List<string> GetInventoryItems()
     {
         return new List<string>(inventoryItems); // Devolver una copia de la lista de objetos del inventario
     }
 
-    // Método para limpiar el inventario visual y la lista interna
+    // Mï¿½todo para limpiar el inventario visual y la lista interna
     private void ClearInventory()
     {
         foreach (Transform child in inventoryPanel.transform)
@@ -100,7 +108,7 @@ public class UIShopManager : MonoBehaviour
         inventoryItems.Clear();
     }
 
-    // Método para cargar los objetos en el inventario desde una lista de nombres
+    // Mï¿½todo para cargar los objetos en el inventario desde una lista de nombres
     public void LoadInventoryItems(List<string> items)
     {
         ClearInventory(); // Limpiar el inventario antes de cargar nuevos datos
@@ -109,7 +117,7 @@ public class UIShopManager : MonoBehaviour
         {
             if (inventoryItems.Count >= 5)
             {
-                Debug.LogWarning("El inventario está lleno. No se puede añadir más objetos.");
+                Debug.LogWarning("El inventario estï¿½ lleno. No se puede aï¿½adir mï¿½s objetos.");
                 break;
             }
 
@@ -117,8 +125,8 @@ public class UIShopManager : MonoBehaviour
             if (equipo != null)
             {
                 GameObject newItem = Instantiate(equipo, Vector3.zero, Quaternion.identity, inventoryPanel.transform);
-                newItem.name = item; // Asignar el nombre del objeto para su identificación
-                inventoryItems.Add(item); // Añadir el objeto a la lista de inventario interna
+                newItem.name = item; // Asignar el nombre del objeto para su identificaciï¿½n
+                inventoryItems.Add(item); // Aï¿½adir el objeto a la lista de inventario interna
             }
             else
             {
