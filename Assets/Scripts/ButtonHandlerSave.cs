@@ -23,7 +23,7 @@ public class ButtonHandlerSave : MonoBehaviour
         {
             loveBar.actualLove = playerData.love;
             loveBar.actualHunger = playerData.hunger;
-            shopManager.totalMoney = playerData.money + 20;
+            shopManager.totalMoney = playerData.money;
             loveBar.UpdateLoveImage();
             loveBar.UpdateHungerImage();
             shopManager.UpdateMoneyText();
