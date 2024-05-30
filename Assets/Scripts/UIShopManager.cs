@@ -18,6 +18,8 @@ public class UIShopManager : MonoBehaviour
 
     // Lista interna para almacenar los nombres de los objetos en el inventario
     public List<string> inventoryItems = new List<string>();
+   
+   
 
     void Start()
     {
@@ -45,6 +47,14 @@ public class UIShopManager : MonoBehaviour
     {
         PriceObject(article);
         LoveBar loveBar = GameObject.FindObjectOfType<LoveBar>();
+
+        // Verificar si el objeto ya está en el inventario
+        if (inventoryItems.Contains(article))
+        {
+            Debug.LogWarning("El objeto ya está en el inventario: " + article);
+            return; // Salir del metodo si el objeto ya está en el inventario
+        }
+
         if (priceObject <= totalMoney && totalObjects < 5)
         {
            
@@ -53,12 +63,14 @@ public class UIShopManager : MonoBehaviour
                 totalMoney -= priceObject;
                 UpdateMoneyText();
                 GameObject equipo = (GameObject)Resources.Load(article);
+
                 if (equipo != null)
                 {
                     GameObject newItem = Instantiate(equipo, Vector3.zero, Quaternion.identity, inventoryPanel.transform);
-                    newItem.name = article; // Asignar el nombre del objeto para su identificación
+                    newItem.name = article; // Asignar el nombre del objeto para su identificacion
                     inventoryItems.Add(article); // Añadir el nombre del objeto a la lista de inventario
                     Debug.Log("Objeto añadido al inventario: " + article);
+                    totalObjects++; // Incrementar el contador de objetos
                 }
                 else
                 {
@@ -158,5 +170,6 @@ public class UIShopManager : MonoBehaviour
             }
         }
     }
+   
 
 }
