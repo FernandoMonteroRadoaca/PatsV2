@@ -53,6 +53,10 @@ public class ButtonHandlerSave : MonoBehaviour
         Debug.Log("Saved Inventory Items: " + itemsString);
         // Llama a la corrutina para mostrar la notificación
         StartCoroutine(ShowNotification());
+        
+       
+
+
     }
     IEnumerator ShowNotification()
     {

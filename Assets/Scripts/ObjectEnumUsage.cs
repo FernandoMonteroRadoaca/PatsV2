@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObjectEnumUsage : MonoBehaviour
 {
+
     
    public enum ObjectsBag
     {
@@ -50,5 +51,9 @@ public class ObjectEnumUsage : MonoBehaviour
 
         }
         Destroy(this.gameObject);
+        uIShopManager.RemoveObject(this.gameObject.name);
+        
+
+
     }
 }

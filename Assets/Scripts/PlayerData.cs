@@ -16,7 +16,7 @@ public class PlayerData
         love = player.actualLove;
         hunger = player.actualHunger;
         money = uIShop.totalMoney;
-        inventoryItems = uIShop.GetInventoryItems();
+        inventoryItems = new List<string>(uIShop.GetInventoryItems());
         
         
     }
