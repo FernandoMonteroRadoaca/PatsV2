@@ -11,6 +11,7 @@ public class ObjectEnumUsage : MonoBehaviour
         LittleHunger,
         MediumHunger,
         BigHunger,
+        LittleMediumHunger,
     };
 
     [SerializeField]  ObjectsBag objectsBag;
@@ -48,6 +49,13 @@ public class ObjectEnumUsage : MonoBehaviour
                     loveBar.IncreaseHungerBy30();
                 }
                 break;
+            case ObjectsBag.LittleMediumHunger:
+                Debug.Log("Restore big hunger");
+                if (loveBar != null)
+                {
+                    loveBar.IncreaseHungerBy30();
+                }
+                break;
 
         }
         Destroy(this.gameObject);
@@ -56,4 +64,5 @@ public class ObjectEnumUsage : MonoBehaviour
 
 
     }
+
 }

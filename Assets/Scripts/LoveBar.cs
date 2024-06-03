@@ -1,9 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-
+using TMPro;
 public class LoveBar : MonoBehaviour
 {
     public Image loveImage;
@@ -18,6 +17,12 @@ public class LoveBar : MonoBehaviour
 
     public event EventHandler DeathDog;
 
+    public TextMeshProUGUI increse20hearth;
+    public TextMeshProUGUI increse10hearth;
+    public TextMeshProUGUI increse30hearth;
+    public TextMeshProUGUI increse5hearth;
+
+
     private void Start()
     {
         
@@ -26,6 +31,8 @@ public class LoveBar : MonoBehaviour
         // Call DecreaseLoveAndHunger method every 0.5 seconds for love and every second for hunger
         InvokeRepeating("DecreaseLove", 0f, 5.5f);
         InvokeRepeating("DecreaseHunger", 0f, 10f);
+      
+
 
         // Subscribe the GameOver method to the DeathDog event
         DeathDog += GameOver;
@@ -54,6 +61,7 @@ public class LoveBar : MonoBehaviour
             OnDeathDog();
         }
     }
+
     public void DecreaseHungerBy(float amount){
         actualHunger -= amount;
         actualHunger = Mathf.Clamp(actualHunger, 0f, maxHunger);
@@ -62,17 +70,55 @@ public class LoveBar : MonoBehaviour
     public void IncreaseHungerBy30()
     {
         IncreaseHunger(30f);
+        increse30hearth.gameObject.SetActive(true);
+        StartCoroutine(ShowNotification30hunger());
+    }
+    IEnumerator ShowNotification30hunger()
+    {
+        increse30hearth.gameObject.SetActive(true);  // Activa el TextMeshPro
+        yield return new WaitForSeconds(0.5f);  // Espera 1 segundo
+        increse30hearth.gameObject.SetActive(false);  // Desactiva el TextMeshPro
+    }
+    IEnumerator ShowNotification10hunger()
+    {
+        increse10hearth.gameObject.SetActive(true);  // Activa el TextMeshPro
+        yield return new WaitForSeconds(0.5f);  // Espera 1 segundo
+        increse10hearth.gameObject.SetActive(false);  // Desactiva el TextMeshPro
+    }
+   IEnumerator ShowNotification20hunger()
+    {
+        increse20hearth.gameObject.SetActive(true);  // Activa el TextMeshPro
+        yield return new WaitForSeconds(0.5f);  // Espera 1 segundo
+        increse20hearth.gameObject.SetActive(false);  // Desactiva el TextMeshPro
+    }
+    IEnumerator ShowNotification5hunger()
+    {
+        increse5hearth.gameObject.SetActive(true);  // Activa el TextMeshPro
+        yield return new WaitForSeconds(0.5f);  // Espera 1 segundo
+        increse5hearth.gameObject.SetActive(false);  // Desactiva el TextMeshPro
     }
 
     public void IncreaseHungerBy10()
     {
         IncreaseHunger(10f);
+        StartCoroutine(ShowNotification10hunger());
     }
 
     public void IncreaseHungerBy20()
     {
         IncreaseHunger(20f);
+        increse20hearth.gameObject.SetActive(true);
+        StartCoroutine (ShowNotification20hunger());
+
     }
+    public void IncreaseHungerBy5()
+    {
+        IncreaseHunger(5f);
+        increse5hearth.gameObject.SetActive(true);
+        StartCoroutine(ShowNotification5hunger());
+    }
+   
+    
     public void IncreaseLove(float amount){
         actualLove += amount;
         actualLove = Mathf.Clamp(actualLove, 0f, maxLove);
