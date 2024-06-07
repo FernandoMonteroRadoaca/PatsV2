@@ -53,7 +53,7 @@ public class ObjectEnumUsage : MonoBehaviour
                 Debug.Log("Restore big hunger");
                 if (loveBar != null)
                 {
-                    loveBar.IncreaseHungerBy30();
+                    loveBar.IncreaseHungerBy5();
                 }
                 break;
 
