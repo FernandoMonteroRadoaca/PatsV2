@@ -60,7 +60,7 @@ public class ShowerButton : MonoBehaviour
         numBubbles--;
         if (numBubbles <= 0)
         {
-            loveBar.IncreaseLove(10); // Incrementa el afecto por 20
+            loveBar.IncreaseLove(10); // Incrementa el afecto por 10
 
             // Resetea el estado del botón
             Cursor.visible = true;
@@ -69,5 +69,6 @@ public class ShowerButton : MonoBehaviour
             numBubbles = 10; // Reinicia el contador de burbujas
             uIManager.ActivateButtons();
         }
+
     }
 }
