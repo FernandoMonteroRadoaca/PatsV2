@@ -319,7 +319,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Musica
+  m_text: "M\xFAsica"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 783d424e0eb357a40abf992dbf0c26c1, type: 2}
   m_sharedMaterial: {fileID: -1090187928357298205, guid: 783d424e0eb357a40abf992dbf0c26c1, type: 2}
@@ -1634,10 +1634,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loveImage: {fileID: 1487566252}
-  actualLove: 60
+  actualLove: 40
   maxLove: 100
   hungerImage: {fileID: 637471559}
-  actualHunger: 50.5
+  actualHunger: 70
   maxHunger: 100
   increse20hearth: {fileID: 1370384299}
   increse10hearth: {fileID: 732696181}
